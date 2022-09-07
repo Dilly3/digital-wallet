@@ -14,8 +14,9 @@ type PostgresDb struct {
 }
 
 // SetupDb sets up database and auto migrate schema
-func (pdb *PostgresDb) SetupDb(host, user, password, dbName, port string) error {
-	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable TimeZone=Africa/Lagos", host, user, password, dbName, port)
+func (pdb *PostgresDb) SetupDb() error {
+	DbParam := InitializeDbParameters()
+	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable TimeZone=Africa/Lagos", DbParam.Host, DbParam.User, DbParam.Password, DbParam.Name, DbParam.Port)
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatal(err)

@@ -21,7 +21,7 @@ type DbParameters struct {
 	Host     string
 	User     string
 	Password string
-	DbName   string
+	Name     string
 	Port     string
 }
 
@@ -40,7 +40,7 @@ func InitializeDbParameters() DbParameters {
 		Host:     host,
 		User:     user,
 		Password: password,
-		DbName:   dbName,
+		Name:     dbName,
 		Port:     port,
 	}
 }

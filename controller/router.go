@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"fmt"
 	"log"
 	"os"
 
@@ -16,21 +17,21 @@ func SetupRouter(h *Handler) (*gin.Engine, string) {
 	router.PATCH("/debit", h.DebitWallet)
 	router.POST("/addcustomer", h.AddCustomer)
 
-	port := os.Getenv("PORT")
+	port := os.Getenv("ROUTER_PORT")
 
 	return router, port
 }
 
 func Start() error {
-	values := repo.InitializeDbParameters()
 	var PDB = new(repo.PostgresDb)
 	h := &Handler{DB: PDB}
 
-	err := PDB.SetupDb(values.Host, values.User, values.Password, values.DbName, values.Port)
+	err := PDB.SetupDb()
 	if err != nil {
 		log.Fatal(err)
 	}
 	routes, port := SetupRouter(h)
+	fmt.Println("Server running on port", port)
 	err = routes.Run(":" + port)
 	if err != nil {
 		log.Fatal(err)
