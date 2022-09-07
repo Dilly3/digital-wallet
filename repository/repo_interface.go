@@ -1,4 +1,4 @@
-package database
+package repository
 
 import (
 	"github.com/dilly3/wallet-api/models"

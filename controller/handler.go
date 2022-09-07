@@ -3,13 +3,13 @@ package controller
 import (
 	"github.com/dilly3/wallet-api/models"
 	"github.com/dilly3/wallet-api/repository"
-	"github.com/dilly3/wallet-api/utils"
+	services "github.com/dilly3/wallet-api/utils"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
 
 type Handler struct {
-	DB database.DB
+	DB repository.DB
 }
 
 func (h *Handler) GetCustomer(c *gin.Context) {
