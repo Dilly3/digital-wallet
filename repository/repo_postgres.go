@@ -2,7 +2,7 @@ package repository
 
 import (
 	"fmt"
-	"github.com/dilly3/wallet-api/models"
+	"github.com/dilly3/digital-wallet/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"

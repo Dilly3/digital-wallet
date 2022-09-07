@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/dilly3/wallet-api/controller"
+	"github.com/dilly3/digital-wallet/controller"
 	"log"
 )
 

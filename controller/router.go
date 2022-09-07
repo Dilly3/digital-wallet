@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	repo "github.com/dilly3/wallet-api/repository"
+	repo "github.com/dilly3/digital-wallet/repository"
 	"github.com/gin-gonic/gin"
 )
 

@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"github.com/dilly3/wallet-api/models"
-	"github.com/dilly3/wallet-api/repository"
-	services "github.com/dilly3/wallet-api/utils"
+	"github.com/dilly3/digital-wallet/models"
+	"github.com/dilly3/digital-wallet/repository"
+	services "github.com/dilly3/digital-wallet/utils"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )

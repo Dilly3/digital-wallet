@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"github.com/dilly3/wallet-api/models"
+	"github.com/dilly3/digital-wallet/models"
 	"github.com/joho/godotenv"
 	"log"
 	"os"

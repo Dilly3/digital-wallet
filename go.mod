@@ -1,4 +1,4 @@
-module github.com/dilly3/wallet-api
+module github.com/dilly3/digital-wallet
 
 go 1.19
 
